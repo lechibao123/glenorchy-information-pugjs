@@ -1,0 +1,165 @@
+/*
+ *  Reset
+ */
+ *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: $light-color;
+    color: $primary-color;
+    overflow-x: hidden;
+    font-family: 'basis-grotesque', sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+font-family: 'basis-grotesque', sans-serif;
+}
+
+[class*=wrapper-child] {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+.text-10{
+    font-size: 10px !important;
+}
+
+.text-title-gray{
+    color: $text-title !important;
+}
+
+hr{
+    border-width:0;
+    color: $bg-footer;
+    background-color:$bg-footer;
+    height: 2px;
+}
+
+.pl-126{
+    padding-left: 126px;
+    @include respond-to(768) {
+        padding-left: 1rem;
+    }
+}
+
+.pr-126{
+    padding-right: 126px;
+    @include respond-to(768) {
+        padding-right: 1rem;
+    }
+}
+
+.pl-110{
+    padding-left: 110px;
+    @include respond-to(768) {
+        padding-left: 1rem;
+    }
+}
+
+.pr-110{
+    padding-right: 110px;
+    @include respond-to(768) {
+        padding-right: 1rem;
+    }
+}
+
+.text-title{
+    color: $text-title !important;
+}
+
+.arrow {
+    padding-left: 0;
+    &::after {
+        display: inline-block;
+        padding-left: 4px;
+        content: ">"; // arrow right unicode
+        -webkit-transition: transform 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+    }
+    &:hover {
+        &::after {
+            -webkit-transform: translateX(4px);
+            -moz-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            -o-transform: translateX(4px);
+            transform: translateX(4px);
+        }
+    }
+}
+
+/*
+ *  Animations
+ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(1rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceUp {
+    from {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-.65rem);
+    }
+
+    50% {
+        transform: translateY(2.5rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.fade {
+    &--in {
+        animation-name: fadeIn;
+        animation-duration: 1.5s;
+    }
+}
+
+.slide {
+    &--up {
+        animation-name: slideUp, fadeIn;
+        animation-duration: 1s, 1.5s;
+    }
+}
+
+.bounce {
+    &--up {
+        animation-name: bounceUp;
+        animation-duration: 1.5s;
+    }
+}

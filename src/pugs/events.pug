@@ -1,0 +1,35 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - Event
+    
+block main-wrapper
+    h1.d-none Event
+    include ./mixin/banner.pug
+    +banner('./assets/imgs/event/event-banner.jpg','event-banner','Upcoming Events')
+    include ./mixin/title.pug   
+    +title('Things to do','Whether you want to challenge your boundaries or are solely looking for a relaxing and unique way to see areas of our great wilderness that lay off the beaten track,')
+    .wrapper-child.pl-110.pr-1
+        .upcoming-imgs.pb-2.pb-md-0
+            .row.mx-0
+                -
+                    let images = [
+                        {src: "./assets/imgs/event/event-1.jpg", alt: "event-1", h3: "Night Market", href: "#"},
+                        {src: "./assets/imgs/event/event-2.jpg", alt: "event-2", h3: "Sky Trip", href: "#"},
+                        {src: "./assets/imgs/event/event-3.jpg", alt: "event-3", h3: "Night Market", href: "#"},
+                        {src: "./assets/imgs/event/event-4.jpg", alt: "event-4", h3: "Sky Trip", href: "#"},
+                        {src: "./assets/imgs/event/event-5.jpg", alt: "event-5", h3: "Night Market", href: "#"},
+                        {src: "./assets/imgs/event/event-6.jpg", alt: "event-6", h3: "Sky Trip", href: "#"},
+                    ]
+                for image in images
+                    .col-md-6.col-12.event-item
+                        .gallery_item
+                            a(href=image.href)
+                                img(src=image.src, alt=image.alt)
+                                .gallery-text
+                                    hr
+                                    .content
+                                        p.text-14 MARCH 14 - 27 2021
+                                            .d-flex.justify-content-between.align-items-center.flex-wrap
+                                                h3.font-weight-bold.m-0=image.h3
+                                                a(href="#").transparent.px-4.py-2.mb-0 Book Now

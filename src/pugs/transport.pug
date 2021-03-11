@@ -1,0 +1,29 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - Transport
+    
+block main-wrapper
+    h1.d-none Transport
+    include ./mixin/banner.pug
+    .getting-around
+        +banner('./assets/imgs/transport/transport-banner.jpg','Transport','Getting Around <br/> Glenorchy, NZ')
+    .wrapper-child.pl-126.pr-3
+        .transport
+            .transport__contents
+                a(href="#") Download the track transport timetable here.
+                p Glenorchy information center located at Glenorchy Hotel 
+                    |can organise transport from Queenstown to Glenorchy and 
+                    |then onto one of the multi day walking tracks in the area. 
+                    |After hours transport can be arranged. 
+                p All track transport leaves from the Glenorchy Hotel and 
+                    |Glenorchy NZ information center General store located on the 
+                    |main street of Glenorchy. All regular bus service to and from 
+                    |Queenston depart from the Glenorchy information Center located 
+                    |at the Glenorchy Hotel then leave for the various tracks from 
+                    |the same information Center.
+                .transport-btn
+                    a(href="#").transparent Book now
+                    a(href="#").mx-3.transparent Contact us
+            .transport__map
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.609469132561!2d168.38420733935996!3d-44.84988598826937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d5a5fcb97a6b7b%3A0xb858e7482520b96c!2sGlenorchy%20Hotel!5e0!3m2!1svi!2s!4v1602755334933!5m2!1svi!2s' width='690' height='357' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0').w-100

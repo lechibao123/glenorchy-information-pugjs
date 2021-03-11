@@ -1,0 +1,17 @@
+.wrapper-child.pl-126.pr-3
+    .owl-carousel.owl-theme.slide-discovery
+        -
+            let discoverys = [
+                {image: './assets/imgs/discovery/slide_1.png', alt: 'slide', h4: 'Where to eat', href: ''},
+                {image: './assets/imgs/discovery/slide_2.png', alt: 'slide', h4: 'Where to stay', href: ''},
+                {image: './assets/imgs/discovery/slide_3.png', alt: 'slide', h4: 'What to do', href: ''},
+                {image: './assets/imgs/discovery/slide_1.png', alt: 'slide', h4: 'Where to eat', href: ''},
+            ]
+        for discovery in discoverys
+            .item
+                img(src=discovery.image, alt=discovery.alt)
+                .slide-discovery-content
+                    .slide-content
+                        hr
+                        h4=discovery.h4
+                        a(href=discovery.href).transparent Discover More

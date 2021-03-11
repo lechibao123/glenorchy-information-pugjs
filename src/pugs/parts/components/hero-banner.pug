@@ -1,0 +1,17 @@
+.wrapper-child.px-3
+  .swiper-container.hero-banner.fade--in
+    .swiper-wrapper
+      - 
+        let banners = [
+          {image: './assets/imgs/banner.png', alt: 'banner', h2: 'Adventure is around the corner', href: ''},
+          {image: './assets/imgs/banner.png', alt: 'banner', h2: 'Adventure is around the corner', href: ''},
+          {image: './assets/imgs/banner.png', alt: 'banner', h2: 'Adventure is around the corner', href: ''},
+          {image: './assets/imgs/banner.png', alt: 'banner', h2: 'Adventure is around the corner', href: ''},
+        ]
+      for banner in banners
+        .swiper-slide
+          img(src=banner.image, alt=banner.alt)
+          .hero-banner-content
+            h2=banner.h2
+            a(href=banner.href).transparent Discover More
+    .swiper-pagination

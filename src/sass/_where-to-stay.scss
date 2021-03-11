@@ -1,0 +1,57 @@
+
+
+.wts{
+    .wts-contents {
+        color: $text-color;
+        letter-spacing: .4px;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-bottom: 90px;
+        @include respond-to(768) {
+            padding: 0px 0 30px 0;
+        }
+        &__img{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            @include respond-to(768) {
+                width: 1000%;
+            }
+        }
+
+        &__content{ 
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+            width: 60%;
+            @include respond-to(768) {
+                width: 100%;
+                padding: 0px !important;
+            }
+            .content {
+                width: 100%;
+                border-top: 2px solid $bg-footer;
+                a{
+                    display: inline-block;
+                    @include transparent(#454444, #313030);
+                }
+                p{
+                    @include respond-to(768) {
+                        text-align: justify;
+                    }
+                }
+            }
+
+            h2{
+                font-family: 'BasisGrotesque-Medium';
+                color: $text-gray;
+                font-size: 1.875rem;
+                letter-spacing: 0.75px;
+                margin-bottom: 26px;
+                margin-top: 35px;
+            }
+        }
+    }
+}

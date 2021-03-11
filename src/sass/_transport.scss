@@ -1,0 +1,38 @@
+.transport{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0 65px 0;
+    @include respond-to(768) {
+        margin: 32px 0;
+    }
+    &__contents{
+        padding-right: 60px;
+        width: 50%;
+        @include respond-to(768) {
+            width: 100%;
+            padding-right: 0;
+        }
+        a{
+            color: $text-transport;
+        }
+        p{
+            color: $text-color;
+            margin: 0;
+        }
+        
+        .transport-btn{
+            padding-top: 42px;
+            a{
+                display: inline-block;
+                @include transparent(#454444, #313030);
+            }
+        }
+    }
+    &__map{
+        width: 50%;
+        @include respond-to(768) {
+            width: 100%;
+            padding-top: 32px;
+        }
+    }
+}

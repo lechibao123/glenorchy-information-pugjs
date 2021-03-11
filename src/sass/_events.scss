@@ -1,0 +1,26 @@
+.upcoming-imgs{
+    .event-item{
+        padding-bottom: 46px;
+        &:nth-child(even)
+        {
+            padding-left: 26px;
+        }
+        &:nth-child(odd)
+        {
+            padding-right: 26px;
+        }
+        @include respond-to(768){
+            padding-bottom: 20px;
+            &:nth-child(even)
+            {
+                padding-left: 0;
+            }
+            &:nth-child(odd)
+            {
+                padding-right: 1rem;
+                padding-left: 0;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,18 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - Home
+    
+block main-wrapper
+    h1.d-none Home
+    include ./parts/components/hero-banner.pug
+    include ./parts/components/slide-thing-to-do.pug
+    .wrapper-child.px-3
+        hr
+    include ./parts/components/glenorchy.pug
+    include ./parts/components/discover.pug
+    .wrapper-child.px-3
+        hr
+    include ./parts/components/upcoming.pug
+    
+        

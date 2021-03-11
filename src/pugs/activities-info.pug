@@ -1,0 +1,19 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - Activities Info
+
+block main-wrapper
+    include ./mixin/banner.pug
+    +banner('./assets/imgs/activities-info.jpg','banner','Hiking')
+        a(href="./activities.html").arrow-back Back to Activities
+    .wrapper-child.pl-126.pr-126
+        .activities-info-block
+            .content
+                p There is a wide range of climbing East of the Rees in the Richardson Mountain Range and in the Forbes Mountain Range in the West. You can also go rock climbing at Chinaman’s Bluff in the Dart Valley.
+                p Before climbing, make sure you register your intentions with the Glenorchy Information Centre and sign out once you return. You also must get permission from the landowner or station managers prior to departure.
+            .contactus
+                a(href="./contact.html") Contact Us
+    .wrapper-child.px-3
+        hr
+    include ./parts/components/other-activity.pug

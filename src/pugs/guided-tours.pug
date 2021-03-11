@@ -1,0 +1,37 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - Guided Tours
+    
+block main-wrapper
+    h1.d-none Guided Tours
+    include ./mixin/banner.pug
+    +banner('./assets/imgs/activities-banner.jpg','banner','Guided Tours')
+    include ./mixin/title.pug   
+    +title('Things to do','Whether you want to challenge your boundaries or are solely looking for a relaxing and unique way to see areas of our great wilderness that lay off the beaten track,')
+    .wrapper-child.pl-126.pr-126
+        .activities-wrapper
+            -
+                let images = [
+                    {src: "./assets/imgs/thing-to-do/Ttd-1.jpg", alt: "Thing-to-do-1", h4: "Track Transport",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-2.jpg", alt: "Thing-to-do-2", h4: "Lake Cruises",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-3.jpg", alt: "Thing-to-do-3", h4: "Kayaking",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-4.jpg", alt: "Thing-to-do-4", h4: "Horse Riding",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-5.jpg", alt: "Thing-to-do-5", h4: "Packrafting",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-6.jpg", alt: "Thing-to-do-6", h4: "Jet Boating",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-7.jpg", alt: "Thing-to-do-7", h4: "Fishing",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-8.jpg", alt: "Thing-to-do-8", h4: "Guided Nature Day Walks",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-9.jpg", alt: "Thing-to-do-9", h4: "Guided Scenic Tours",href: "#",link: "./contact.html"},
+                    {src: "./assets/imgs/thing-to-do/Ttd-10.jpg", alt: "Thing-to-do-10", h4: "Skiing and Snowboarding",href: "#",link: "./contact.html"},
+                ]
+            for image in images
+                .activities_box
+                    .img-hover-zoom
+                        a(href=image.href)
+                            img(src=image.src, alt=image.alt)
+                        .thingtodo-hr
+                            hr
+                        .thingtodo-content
+                            h4=image.h4
+                            a(href=image.href) Learn More
+                            a(href=image.link).float-right Contact US

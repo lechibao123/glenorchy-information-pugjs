@@ -1,0 +1,22 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - General Store
+    
+block main-wrapper
+    h1.d-none General Store
+    include ./mixin/banner.pug
+    .getting-around
+        +banner('./assets/imgs/general-store/general-store-banner.jpg','general-store','Visit Us At <br/> The Historic Glenorchy Hotel')
+    .wrapper-child.pl-126.pr-3
+        .general
+            .general__contents
+                h2 Glenorchy General Store and Glenorchy Information Centre
+                p The Glenorchy General Store is a one stop shop for all your shopping needs.
+                p It’s a great place to grab a pie, sandwich, muffin and drink before heading 
+                    |out to one of our great walking tracks or picnic areas. We also sell batteries, 
+                    |papers, fishing gear and maps. Mountain bike hire and bottle store available here 
+                    |too.
+                p We also provide packed lunches, camping supplies, gifts, postcards and internet access.
+            .general__map
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.609469132561!2d168.38420733935996!3d-44.84988598826937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9d5a5fcb97a6b7b%3A0xb858e7482520b96c!2sGlenorchy%20Hotel!5e0!3m2!1svi!2s!4v1602755334933!5m2!1svi!2s' width='690' height='357' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0').w-100

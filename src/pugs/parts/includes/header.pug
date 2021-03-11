@@ -1,0 +1,44 @@
+section.sticky
+    .common-header
+        nav.navbar.navbar-expand-lg.navbar-light.wrapper-child
+            a(href='./index.html').navbar-brand.img-header
+                img(src="./assets/imgs/logo.svg", alt="logo")
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNavDropdown.collapse.navbar-collapse
+                ul.navbar-nav.ml-auto.nav
+                    li.nav-item.dropdown.catalog
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                            span.pr-1 About
+                            i.fas.fa-angle-down
+                        .dropdown-menu.catalog-menu(aria-labelledby='navbarDropdownMenuLink')
+                            h2 About
+                            hr.mt-4
+                            .d-flex.justify-content-between.flex-wrap.pt-3
+                                -
+                                    let links = [
+                                        {href: "#", label: "About Glenorchy"},
+                                        {href: "#", label: "History"},
+                                        {href: "#", label: "Natural Flora and Fauna"},
+                                        {href: "#", label: "Cafes, Restaurants and Bars"},
+                                        {href: "#", label: "Shopping"},
+                                        {href: "#", label: "Glenorchy Amenitites"},
+                                    ]
+                                for link in links
+                                    a(href=link.href)= link.label
+                    li.nav-item
+                        a.nav-link(href='./activities.html') Activities
+                    li.nav-item
+                        a.nav-link(href='./guided-tours.html') Guided Tours
+                    li.nav-item
+                        a.nav-link(href='#') Walking Tracks
+                    li.nav-item
+                        a.nav-link(href='./where-to-stay.html') Where To Stay
+                    li.nav-item
+                        a.nav-link(href='./transport.html') Transport
+                    li.nav-item
+                        a.nav-link(href='./general-store.html') General Store
+                    li.nav-item
+                        a.nav-link(href='./events.html') Event
+                    li.nav-item
+                        a.nav-link(href='./contact.html') Contact

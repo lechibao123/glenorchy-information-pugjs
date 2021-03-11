@@ -1,0 +1,19 @@
+.wrapper-child.pl-126
+    .other-activities
+        h3 Other Activities
+        .other-activities-wrapper
+            -
+                let others = [
+                    {src: "./assets/imgs/slide/slide_3.jpg", alt: "slide-1", h4: "Mountain Biking",href: "./activities-info.html"},
+                    {src: "./assets/imgs/slide/slide_4.jpg", alt: "slide-2", h4: "Fishing",href: "./fishing-info.html"},
+                ]
+            for other in others
+                .other-activities-box
+                    .img-hover-zoom
+                        a(href=other.href)
+                            img(src=other.src, alt=other.alt)
+                        .border-hr
+                            hr
+                        .content-box
+                            h4 !{other.h4}
+                            a(href=other.href) Learn More

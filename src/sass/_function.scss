@@ -1,0 +1,81 @@
+//responsive
+@mixin respond-to($media) {
+    @media only screen and (max-width: $media + "px") {
+        @content;
+    }
+}
+
+/*========================================================*/
+@mixin respond-toSP($media) {
+    @media only screen and (min-width: $media + "px") {
+        @content;
+    }
+}
+
+/*========================================================*/
+
+/*========================================================*/
+@mixin ie() {
+
+    //----------------------------------------
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+        @content;
+    }
+
+    //----------------------------------------
+}
+
+
+@mixin logo--special($st, $ft) {
+    animation-name: slideUp, fadeIn;
+    animation-timing-function: ease, ease;
+    animation-duration: $st, $ft;
+}
+
+@mixin slide--up($st, $ft) {
+    animation-name: slideUp, fadeIn;
+    animation-duration: $st, $ft;
+    animation-timing-function: ease, ease;
+}
+
+/*========================================================*/
+
+@mixin margin--top($h){
+    margin-top: $h;
+}
+
+@mixin margin--bottom($h){
+    margin-bottom: $h;
+}
+
+@mixin title($cl){
+    font-family: 'BasisGrotesque-Medium';
+    color: $cl;
+    font-weight: bold;
+    font-size: 3.75rem;
+    letter-spacing: 1.5 px;
+    padding-bottom: 9px;
+    padding-top: 55px;
+    @include respond-to(768) {
+        font-size: 1.875rem;
+        padding-bottom: 4px;
+        padding-top: 20px;
+    }
+}
+@mixin transparent($border-color,$color)  {
+    font-size: 14px;
+    font-family: basis-grotesque;
+    font-weight: 700;
+    border: 1px solid $border-color;
+    color: $color;
+    border-radius: 26px;
+    padding: 10px 20px;
+    letter-spacing: 0.48px;
+    text-decoration: none;
+    &:hover{
+        background-color: $button;
+        color: $light-color;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,20 @@
+include ../../mixin/title.pug
++title('Things to do','Whether you want to challenge your boundaries or are solely looking for a relaxing and unique way to see areas of our great wilderness that lay off the beaten track,','text-title')
+    a(href="./guided-tours.html").arrow VIEW ALL
+.wrapper-child.pb-5.pl-126
+    .swiper-container.slide-thingtodo
+        .swiper-wrapper
+            - 
+                let slides = [
+                    {image: './assets/imgs/slide/slide_1.jpg', alt: 'slide', h4: 'Hiking', href: './activities-info.html'},
+                    {image: './assets/imgs/slide/slide_2.jpg', alt: 'slide', h4: 'Hunting', href: './activities-info.html'},
+                    {image: './assets/imgs/slide/slide_3.jpg', alt: 'slide', h4: 'Mountain', href: './activities-info.html'},
+                    {image: './assets/imgs/slide/slide_1.jpg', alt: 'slide', h4: 'Hiking', href: './activities-info.html'},
+                ]
+            for slide in slides
+                .swiper-slide
+                    a(href=slide.href)    
+                        img(src=slide.image, alt=slide.alt)
+                        .thingtodo-content
+                            h4=slide.h4
+                            a(href=slide.href).learnmore Learn More

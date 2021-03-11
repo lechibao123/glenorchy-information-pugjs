@@ -1,0 +1,27 @@
+.wrapper-child.px-3
+    .common-footer
+        .footer-img
+            img(src="./assets/imgs/footer/footer.jpg", alt="footer")
+        .footer-content
+            .container-fluid
+                .row
+                    .col-12.pr-0.pr-md-5
+                        .row.d-flex.justify-content-end
+                            - 
+                                let datas = [
+                                    {href: "#", label: "About", target: "_self"},
+                                    {href: "./transport.html", label: "Transport", target: "_self"},
+                                    {href: "./general-store.html", label: "General Store", target: "_self"},
+                                    {href: "#", label: "Glenorchy Hotel", target: "_self"},
+                                    {href: "./events.html", label: "Event", target: "_self"},
+                                    {href: "./contact.html", label: "Contact", target: "_self"},
+                                ]
+                            for data in datas
+                                .col-md-auto.col-6
+                                    a(href=data.href, target=data.target ? data.target : "")= data.label
+                    .col-12.pr-0.pr-md-5.mb-2.mb-md-4
+                        .row.d-flex.justify-content-end
+                            .col-md-auto.col-6
+                                a(href="#" target="_blank").text-10 Privacy Policy
+                            .col-md-auto.col-6
+                                a(href="#" target="_blank").text-10 All rights reserved

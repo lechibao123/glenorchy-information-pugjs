@@ -1,0 +1,112 @@
+.upcoming{
+    .upcoming-title h3{
+        @include title($text-gray);
+    }
+    .upcoming-content{
+        color: $text-color;
+        padding-bottom: 60px;
+        @include respond-to(768) {
+            padding-bottom: 30px;
+        }
+        a{
+            font-family: 'BasisGrotesque-Medium';
+            color: $dot-span;
+            font-size: .875rem;
+            text-decoration: none;
+        }
+    }
+}
+
+.upcoming-imgs{
+    padding-bottom: 144px;
+    @include respond-to(768) {
+        padding-bottom: 42px;
+    }
+    
+    .gallery_item{
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        
+        &:hover .gallery-text{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        a{
+            color: $text-footer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .gallery-text{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 40px 40px;
+            opacity: 0;
+            transition: all 0.5s;
+            transform: translateY(50px);
+            background-color: #00000080;
+            hr{
+                background-color: white !important;
+            }
+            .content{
+                h3{
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    letter-spacing: 0.48px;
+                }
+                // padding-top: 160px;
+                // transform: translateY(165px);
+                // width: 100%;
+                // height: 100%;
+                @include respond-toSP(1024){
+                    padding-top: 0;
+                    h3{
+                        font-size: 1.625rem;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+                @include respond-toSP(1110){
+                    padding-top: 150px;
+                    h3{
+                        font-size: 1.625rem;
+                    }
+                    .transparent{
+                        font-size:12px;
+                    }
+                }
+                @include respond-toSP(1440){
+                    padding-top: 190px;
+                    h3{
+                        font-size: 1.625rem;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+                @include respond-toSP(1920){
+                    padding-top: 330px;
+                }
+                @include respond-to(768) {
+                    h3{
+                        font-size: 1rem;
+                    }
+                    a{
+                        font-size: 0.75rem;
+                    }
+                }
+                @include respond-to(768) {
+                    a{
+                        font-size: 9px;
+                    }
+                }
+                @include respond-to(376) {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}

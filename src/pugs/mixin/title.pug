@@ -1,0 +1,12 @@
+mixin title(title,contents,color)
+    .wrapper-child.pr-3.pr-md-5.pl-126
+        section.upcoming
+            .upcoming-title
+                h3(class=color)= title
+            .upcoming-content
+                .row
+                    .col-lg-5.col-md-7.col-12
+                        p.m-0.text-justify= contents
+                    .col-lg-7.col-md-5.col-12.align-self-start.text-right
+                        if block
+                            block

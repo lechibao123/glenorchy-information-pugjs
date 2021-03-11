@@ -1,0 +1,15 @@
+.discover{
+    .discover-title h1{
+        @include title($text-gray);
+    }
+    .discover-content{
+        width: 50%;
+        display: flex;
+        color: $text-color;
+        padding-bottom: 60px;
+        @include respond-to(768) {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+    }
+}

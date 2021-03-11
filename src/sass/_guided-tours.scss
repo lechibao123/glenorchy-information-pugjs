@@ -1,0 +1,24 @@
+.guided-tours__imgs{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 95px;
+    @include respond-to(768){
+        margin-bottom: 40px;
+    }
+    .guided-item{
+        width: 50%;
+        @include respond-to(768){
+            width: 100%;
+        }
+        img {
+            padding: 10px;
+            flex: 1 auto;
+            @include respond-to(768){
+                padding: 10px 0px 10px 0;
+            }
+        }
+    }
+    
+}

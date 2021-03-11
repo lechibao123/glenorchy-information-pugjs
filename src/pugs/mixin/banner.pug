@@ -1,0 +1,14 @@
+mixin banner(image,alt,content)
+    .wrapper-child.px-3
+        .banner
+            div
+                img(src=image, alt=alt)
+            .banner-content
+                .container-fluid
+                    .row
+                        .col-12.pl-110
+                            hr
+                            h2 !{content}
+                        .col-12.text-right
+                            if block
+                                block

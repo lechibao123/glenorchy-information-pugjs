@@ -1,0 +1,20 @@
+.glenorchy{
+    .glenorchy-title {
+        padding-bottom: 34px;
+        h1{
+        @include title($text-gray);
+        }
+    }
+    .glenorchy-content{
+        padding-bottom: 50px;
+        width: 90%;
+        @include respond-to(768) {
+            padding-bottom: 25px;
+            width: 100%;
+        }
+        p{
+            letter-spacing: 0.4px;
+            color: $text-color;
+        }
+    }
+}

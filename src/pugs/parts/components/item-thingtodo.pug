@@ -1,0 +1,26 @@
+.wrapper-child.pl-126.pr-126
+    .activities-wrapper
+        -
+            let activities = [
+                {src: "./assets/imgs/slide/slide_1.jpg", alt: "slide-1", content: "Hiking",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_2.jpg", alt: "slide-2", content: "Hunting",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_3.jpg", alt: "slide-3", content: "Mountain Biking",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_4.jpg", alt: "slide-4", content: "Fishing",href: "./fishing-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_5.jpg", alt: "slide-5", content: "Paragliding",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_6.jpg", alt: "slide-6", content: "Swimming",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_7.jpg", alt: "slide-7", content: "Private Boating & Jetboating",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_8.jpg", alt: "slide-8", content: "Golf",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_9.jpg", alt: "slide-9", content: "Wind and Kite Surfing",href: "./activities-info.html",link: "./contact.html"},
+                {src: "./assets/imgs/slide/slide_10.jpg", alt: "slide-10", content: "Skateboard Park",href: "./activities-info.html",link: "./contact.html"},
+            ]
+        for activity in activities
+            .activities_box
+                .img-hover-zoom
+                    a(href=activity.href)
+                        img(src=activity.src, alt=activity.alt)
+                    .thingtodo-hr
+                        hr
+                    .thingtodo-content
+                        h4=activity.content
+                        a(href=activity.href) Learn More
+                        a(href=activity.link).float-right Contact US

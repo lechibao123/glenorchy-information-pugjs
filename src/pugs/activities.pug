@@ -1,0 +1,12 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - Activities
+
+block main-wrapper
+    h1.d-none Activities
+    include ./mixin/banner.pug
+    +banner('./assets/imgs/activities-banner.jpg','banner','Activities')
+    include ./mixin/title.pug
+    +title("Things to do","Whether you want to challenge your boundaries or are solely looking for a relaxing and unique way to see areas of our great wilderness that lay off the beaten track, ")
+    include ./parts/components/item-thingtodo.pug

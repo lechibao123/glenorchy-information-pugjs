@@ -1,0 +1,31 @@
+
+// Theme variables 
+$primary-color: #2B4429;
+$light-color: white;
+$text-color: #5A5959;
+$text-title: #D2D2D2;
+$text-header: #424242;
+$text-footer: #FFFFFF;
+$text-gray: #909090;
+$text-hover: #06B4E1;
+$text-transport: #00B0E1;
+$text-header-dropdown: #BEBEBE;
+$bg-footer: #D8D8D8;
+$bg-header: #F5F5F5;
+
+$button: #313030;
+$dot-span: #03B3E2;
+
+@font-face {
+    font-family: basis-grotesque;
+    src: url("../fonts/BASIS-GROTEQUE/BasisGrotesque-Regular.ttf");
+}
+
+@font-face {
+    font-family: BasisGrotesque-Medium;
+    src: url("../fonts/BASIS-GROTEQUE/BasisGrotesque-Bold.ttf");
+}
+@font-face {
+    font-family: basis-grotesque-italic;
+    src: url("../fonts/BASIS-GROTEQUE/BasisGrotesque-Italic.ttf");
+}

@@ -1,0 +1,83 @@
+.other-activities{
+    padding-right: 122px;
+    padding-bottom: 85px;
+    .other-activities-wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 -26px;
+        @include respond-to(767){
+            flex-direction: column;
+            margin:0;
+        }
+    }
+    .other-activities-box{
+        position: relative;
+        width: calc(50% - 26px);
+        margin: 0 26px;
+        @include respond-to(767){
+            width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .img-hover-zoom{
+            overflow: hidden;
+            img{
+                transition: transform 1s ease;
+            }
+            &:hover img{
+                transform: scale(1.2);
+            }
+        }
+        .border-hr{
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            padding: 0 30px;
+            hr{
+                background-color: $text-footer;
+            }
+        }
+        .content-box{
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            padding: 0 30px;
+            h4{
+                font-family: BasisGrotesque-Medium;
+                font-size: 3.75rem;
+                color: $text-footer;
+                letter-spacing: 1.5px;
+                width: 100%;
+                max-width: 409px;
+                @include respond-to(1025){
+                    font-size: 2rem;
+                }
+                @include respond-to(480){
+                    font-size: 1.625rem;
+                }
+            }
+            a{
+                font-family: BasisGrotesque-Medium;
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                color: $text-footer;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    
+    
+    @include respond-to(768){
+        padding-right: 1rem;
+    }
+    h3{
+        color: #909090;
+        font-size: 30px;
+        letter-spacing: 0.75px;
+        line-height: 32.81px;
+        text-align: left;
+        font-weight: bold;
+        padding-top: 94px;
+        padding-bottom: 40px;
+    }
+}

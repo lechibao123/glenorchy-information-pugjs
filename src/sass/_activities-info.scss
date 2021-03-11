@@ -1,0 +1,44 @@
+.activities-info-block{
+    display: flex;
+    // flex-wrap: wrap;
+    padding-top: 66px;
+    padding-bottom: 37px;
+    flex-direction: row;
+    .content{
+        font-size: 16px;
+        letter-spacing: 0.4px;
+        line-height: 24px;
+        text-align: left;
+        width: 500px;
+        color: $text-color;
+    }
+    .contactus{
+        flex: 50%;
+        text-align: right;
+        
+        a{
+            font-size: 0.875rem;
+            border-radius: 26px;
+            border: 1px solid #494949;
+            padding: 10px 20px;
+            color: $dot-span;
+            font-weight: bold;
+            text-decoration: none;
+            &:hover {
+                background-color: $text-hover;
+                color: $light-color;
+                border: 0;
+            }
+        }
+    }
+    @include respond-to(768){
+        flex-direction: column;
+        .contactus{
+            text-align: center;
+            padding-top: 20px;
+        }
+        .content{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+extends ./parts/layout.pug
+
+prepend meta
+    title Namtech - Where to stay
+    
+block main-wrapper
+    h1.d-none Where to stay
+    include ./mixin/banner.pug
+    +banner('./assets/imgs/thing-to-do/Ttd-banner.jpg','Thing-to-do','Where to stay')
+    include ./mixin/title.pug   
+    +title('Things to do','Whether you want to challenge your boundaries or are solely looking for a relaxing and unique way to see areas of our great wilderness that lay off the beaten track,')
+    .wrapper-child.pl-110.pr-110
+        .wts
+            -
+                let leftRight = [
+                    {padding:'padding-left: 65px;', flexdirection:'flex-direction:row' ,image: "./assets/imgs/where-to-stay/wts-1.jpg", h2:'Mt Earnslaw Motel',description:'Mt Earnslaw Motels stylish studio units with full kitchen, TV, phone and private bathroom. Seperate laundry facilities and two outside BBQ areas overlooking the snow capped Mt Earnslaw, offers guest a real welcome to Glenorchy. Contact us to book now!',hrefButton1:'#',hrefButton2:'#'},
+                    {padding:'padding-right: 65px;',flexdirection:'flex-direction:row-reverse', image:"./assets/imgs/where-to-stay/wts-2.jpg", h2:'Glenorchy Hotel',description:'Relax and enjoy the kiwi hospitality at the Glenorchy Hotel with a choice of either full ensuite bedrooms with spectacular views, or a room with shared facilities. Situated in the centre of Glenorchy. There are self contained campervan overnight parking is complimentary while dining in the Glenorchy Hotel restaurant or bar. Contact us to book […]',hrefButton1:'#',hrefButton2:'#'},
+                    {padding:'padding-left: 65px;',flexdirection:'flex-direction:row', image: "./assets/imgs/where-to-stay/wts-3.jpg", h2:'Glenorchy Backpackers Retreat',description:'This cosy cottage accommodation is located adjacent to the hotel and comes complete with full kitchen facilities, showers, TV lounge, comfortable beds and log fire. Free storage area for bikes, packs, etc is available, along with a washing machine and dryer. Glenorchy Hotel offers ensuite rooms in a quite environment. Full bar and restaurant facilities. […]',hrefButton1:'#',hrefButton2:'#'}
+                ]
+            for value in leftRight
+                .wts-contents(style=value.flexdirection)
+                    .wts-contents__img
+                            img(src=value.image, alt="img")
+                    .wts-contents__content(style=value.padding)
+                        .content
+                            h2=value.h2
+                            p.m-0=value.description
+                            .mt-3.mt-md-4
+                                a(href=value.hrefButton1).transparent Book now
+                                a(href=value.hrefButton2).mx-3.transparent Learn more 

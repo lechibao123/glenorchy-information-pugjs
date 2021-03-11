@@ -1,0 +1,90 @@
+.activities-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 45px;
+    @include respond-to(768){
+        margin-bottom: 40px;
+        padding: 0 15px 0 15px;
+    }
+    .activities_box{
+        width: 50%;
+        position: relative;
+        padding-bottom: 46px;
+        &:nth-child(even)
+        {
+            padding-left: 26px;
+        }
+        &:nth-child(odd)
+        {
+            padding-right: 26px;
+        }
+        @include respond-to(768){
+            &:nth-child(even)
+            {
+                padding-left: 0;
+            }
+            &:nth-child(odd)
+            {
+                padding-right: 0;
+            }
+        }
+        @include respond-to(768){
+            width: 100%;
+        }
+        .img-hover-zoom{
+            overflow: hidden;
+            img{
+                transition: transform 1s ease;
+            }
+            &:hover img{
+                transform: scale(1.2);
+            }
+        }
+        .thingtodo-hr{
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 56px;
+            @include respond-to(769){
+                padding-right: 30px;
+            }
+            hr{
+                background-color: $text-footer;
+            }
+        }
+    }
+    .thingtodo-content{
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 56px;
+        @include respond-to(769){
+            padding-right: 30px;
+        }
+        h4{
+            font-family: BasisGrotesque-Medium;
+            font-size: 3.75rem;
+            color: $text-footer;
+            letter-spacing: 1.5px;
+            width: 100%;
+            max-width: 409px;
+            @include respond-to(1280){
+                font-size: 2rem;
+            }
+            @include respond-to(480){
+                font-size: 1.625rem;
+            }
+        }
+        a{
+            font-family: BasisGrotesque-Medium;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: $text-footer;
+            letter-spacing: 1px;
+        }
+    }
+}
